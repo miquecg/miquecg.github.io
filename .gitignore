@@ -1,0 +1,12 @@
+# Linux
+.*
+!.gitignore
+!.gitattributes
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Jekyll
+_site/
