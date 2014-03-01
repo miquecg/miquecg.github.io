@@ -1,0 +1,16 @@
+---
+layout: nil
+permalink: /humans.txt
+---
+/* TEAM */
+Owner and developer: Miguel Casal Guillán
+Twitter: miquecg
+Location: Vigo (ES)
+
+/* SITE */
+Last update: {{ site.posts.first.date | date: '%Y/%m/%d' }}
+Standards: HTML5, CSS3, Atom, Sitemaps
+Components: HTML5 Boilerplate, normalize.css, jQuery
+Tools: Jekyll, Liquid, Grunt
+Infrastructure: GitHub, Amazon S3, CloudFlare
+Software: Linux, Sublime Text, Mozilla Firefox, Firebug

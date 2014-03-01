@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es-ES"{% if page.id or page.url == '/' %} prefix="og: http://ogp.me/ns#"{% endif %}>
+    <head>
+
+{% include head.html %}    </head>
+    <body>{% if page.id %}
+
+{% include fb_div.html %}{% endif %}
+
+{% include cabecera.html %}
+{{ content }}
+
+{% include footer.html %}{% unless page.nojs %}
+
+{% include scripts.html %}{% endunless %}
+    </body>
+</html>

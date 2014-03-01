@@ -1,0 +1,36 @@
+---
+layout: nil
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation=
+       "
+        http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd
+       "
+>
+{% for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url | uri_escape }}</loc>
+        <image:image>
+            <image:loc>{{ site.assets_host }}/img/articulos/{{ post.img_336_280 | uri_escape }}</image:loc>
+            <image:title>{{ post.title_imagen }}</image:title>
+        </image:image>
+        <priority>0.6</priority>
+    </url>
+{% endfor %}{% for page in site.pages %}{% if page.sitemap.size > 0 %}{% unless page.url contains '/articulos/pag/' %}
+    <url>
+        <loc>{{ site.url }}{{ page.url | remove: 'index.html' | uri_escape }}</loc>
+        <lastmod>{% if page.sitemap.lastmod %}{{ page.sitemap.lastmod | date_to_xmlschema }}{% else %}{{ site.posts.first.date | date_to_xmlschema }}{% endif %}</lastmod>
+        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+        <priority>{{ page.sitemap.priority }}</priority>
+    </url>
+{% endunless %}{% endif %}{% endfor %}
+</urlset>

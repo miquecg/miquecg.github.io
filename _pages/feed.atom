@@ -1,0 +1,39 @@
+---
+layout: nil
+permalink: /feed.atom
+---
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-ES" xml:base="{{ site.url }}">
+
+    <title>{{ site.title }}</title>
+    <subtitle>{{ site.description }}</subtitle>
+    <link href="{{ page.url }}" type="application/atom+xml" rel="self"/>
+    <link href="/articulos/" type="text/html" rel="alternate"/>
+    <id>{{ site.url | append: '/' }}</id>
+    <generator uri="http://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
+    <icon>/favicon.ico?v1.0</icon>
+    <rights>{{ site.license }}</rights>
+    <author>
+        <name>{{ site.author }}</name>
+        <uri>https://twitter.com/miquecg</uri>
+    </author>
+    <updated>{{ site.posts.first.date | date_to_xmlschema }}</updated>
+
+{% for post in site.posts limit: 10 %}
+    <entry>
+        <title>{{ post.title | xml_escape }}</title>
+        <link rel="alternate" type="text/html" href="{{ post.url }}"/>
+        <id>{{ site.url | remove: 'http://' | prepend: 'tag:' | append: ','}}{{ post.date | date: '%Y-%m-%d' | append: ':/articulos/' }}{{ post.date | date: '%Y%m%d%H%M' }}</id>
+        <published>{{ post.date | date_to_xmlschema }}</published>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <summary type="html">
+            {{ post.excerpt | strip_newlines | xml_escape }}
+        </summary>
+        <content type="html">
+            &lt;img src="{{ site.assets_host }}/img/articulos/{{ post.img_336_280 }}" alt="{{ post.alt_imagen }}" title="{{ post.title_imagen }}"/&gt;
+            {{ post.content | strip_newlines | xml_escape }}
+        </content>
+    </entry>
+{% endfor %}
+</feed>

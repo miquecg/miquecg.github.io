@@ -1,0 +1,35 @@
+/*******************************************************************************
+ 404
+*******************************************************************************/
+.imagen-404 {
+    display: none;
+    -webkit-box-shadow: 0 0 7px 1px #333333;
+       -moz-box-shadow: 0 0 7px 1px #333333;
+            box-shadow: 0 0 7px 1px #333333;
+    margin: 0 auto 1.5em;
+    width: 100%;
+}
+
+.texto-404 {
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 1em;
+    background: #FFF;
+}
+
+h2.texto-404 {
+    padding-top: 1.3em;
+}
+
+.creditos {
+    display: none;
+    padding-top: 0.3em;
+    font-size: 0.7em;
+    font-style: italic;
+    text-align: right;
+}
+
+.origen-creditos {
+    font-style: normal;
+    font-weight: 600;
+}

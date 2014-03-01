@@ -1,0 +1,431 @@
+/*******************************************************************************
+ @MEDIA QUERIES
+*******************************************************************************/
+@media only screen and (min-width: 14em) {
+    .barra-superior {
+        padding: 0.4em 0.5em;
+        text-align: left;
+    }
+
+    .logo {
+        display: inline;
+    }
+
+    #boton-menu {
+        float: right;
+        margin-top: 0.16em;
+    }
+
+    .ficha-bio {
+        border-bottom: 1px solid #999;
+    }
+
+    .imagen-ficha-bio {
+        border: 0;
+        width: 50%;
+    }
+
+    .perfiles-online {
+        display: inline-block;
+        border: 0;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        vertical-align: middle;
+        width: 50%;
+    }
+
+    .articulo > p:first-of-type::first-letter {
+        float: left;
+        padding: 10px 12px 0 0;
+        color: #FFBF40;
+        font-family: 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida
+                   , 'Georgia', Times, 'Times New Roman', serif;
+        font-size: 3em;
+        font-style: normal;
+        line-height: 0.7em;
+    }
+
+    .articulo > p {
+        text-indent: 1.5em;
+    }
+
+    .fondo-404 {
+        padding-top: 1.5em;
+        background: #222;
+    }
+
+    .imagen-404,
+    .creditos {
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 20em) {
+    .barra-superior {
+        border-bottom-color: #009999;
+    }
+
+    .perfiles-online {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        font-size: 1em;
+    }
+
+    .hero {
+        padding: 10px 0 10px 10px;
+    }
+
+    .imagen-hero {
+        display: inline-block;
+        border-color: #DDD;
+        border-width: 3px;
+        padding: 0;
+        width: 50%;
+    }
+
+    .cita-hero {
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        padding: 0.5em;
+        vertical-align: middle;
+        width: 50%;
+    }
+
+    .parrafo-ficha-articulo {
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 24em) {
+    .perfiles-online {
+        font-size: 1.2em;
+    }
+
+    .imagen-404 {
+        width: 75%;
+    }
+}
+
+
+@media only screen and (min-width: 28em) {
+    body {
+        margin-bottom: 40px;
+    }
+
+    #boton-menu {
+        display: none;
+    }
+
+    #menu {
+        position: static;
+        display: inline;
+        float: right;
+        margin-top: 3px;
+    }
+
+    .link-menu {
+        display: inline;
+        border-bottom: none;
+        padding: 0 0.7em;
+        background: transparent;
+        color: #555;
+    }
+
+    .link-menu.activo {
+        color: #FFAA00;
+    }
+
+    .link-menu.cuarto {
+        display: none;
+    }
+
+    .link-menu:hover,
+    .link-menu:focus {
+        background: transparent;
+        color: #FFAA00;
+    }
+
+    .ficha-bio {
+        float: left;
+        margin: 0.25em 1.2em 0.5em;
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+        width: 30%;
+    }
+
+    .imagen-ficha-bio {
+        border-bottom: 1px solid #999;
+        width: 100%;
+    }
+
+    .perfiles-online {
+        display: block;
+        padding-left: 1em;
+        padding-right: 0;
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    .cita-hero {
+        padding: 1em;
+        font-size: 1.1em;
+    }
+
+    .titulo-articulo {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .texto-compartir {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .compartir {
+        display: inline-block;
+        margin: 0 16px 0 0;
+        vertical-align: middle;
+    }
+
+    .compartir.facebook {
+        margin-bottom: 5px;
+    }
+
+    .compartir.twitter {
+        vertical-align: middle;
+    }
+
+    #___plusone_0 {
+        display: inline-block !important;
+        margin-bottom: 0 !important;
+        vertical-align: middle !important;
+        width: 85px !important;
+    }
+
+    .encabezado-secciones-sitio {
+        position: absolute;
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        width: 1px;
+    }
+
+    .imagen-ficha-articulo {
+        display: block;
+    }
+
+    .parrafo-url-feed {
+        font-size: 1.2em;
+    }
+}
+
+
+@media only screen and (min-width: 30em) {
+    .barra-superior {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .logo {
+        margin-left: 0.77em;
+    }
+
+    .link-menu.tercero {
+        margin-right: 0.45em;
+    }
+}
+
+
+@media only screen and (min-width: 35em) {
+    .ficha-bio {
+        width: 25%;
+    }
+
+    .cita-hero {
+        font-size: 1.35em;
+    }
+
+    .texto-compartir {
+        display: inline;
+        margin: 0 16px 0 0;
+        vertical-align: middle;
+    }
+
+    .articulo-siguiente {
+        clear: none;
+        float: right;
+    }
+
+    .imagen-404 {
+        width: 65%;
+    }
+}
+
+
+@media only screen and (min-width: 46em) {
+    body {
+        margin: 0 auto 61px;
+        overflow-x: hidden;
+        width: 45em;
+    }
+
+    .barra-superior {
+        margin-bottom: 2em;
+    }
+
+    .hero {
+        margin: 0 auto 2em;
+        width: 95%;
+    }
+
+    .cita-hero {
+        font-size: 1.45em;
+    }
+
+    .pie-web {
+        height: auto;
+    }
+
+    .parrafo-pie-web {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        width: 45em;
+    }
+
+    .bloque-ancho-viewport {
+        margin-left: -500%;
+        margin-right: -500%;
+        padding-left: 500%;
+        padding-right: 500%;
+    }
+
+    .imagen-404 {
+        width: 55%;
+    }
+}
+
+
+@media only screen and (min-width: 65em) {
+    html {
+        background: #F8F5DF;
+    }
+
+    body {
+        border-radius: 0 0 5px 5px;
+        -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+           -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+        margin-bottom: 150px;
+        padding: 0 3em 3em;
+        background: #FFF;
+    }
+
+    .barra-superior::before {
+        position: absolute;
+        z-index: -1;
+        top: 103%;
+        left: 0;
+        border-color: #009999 #009999 transparent transparent;
+        border-style: solid;
+        border-width: 6px 10px;
+        content: '';
+    }
+
+    .barra-superior {
+        position: relative;
+        border-left: 1px solid rgba(200, 200, 200, 0.2);
+        border-right: 1px solid rgba(200, 200, 200, 0.2);
+        margin-left: -4.1em;
+        margin-right: -4.1em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .barra-superior::after {
+        position: absolute;
+        z-index: -1;
+        top: 103%;
+        right: 0;
+        border-color: #009999 transparent transparent #009999;
+        border-style: solid;
+        border-width: 6px 10px;
+        content: '';
+    }
+
+    .logo {
+        margin-left: 2.8em;
+    }
+
+    .link-menu.tercero {
+        margin-right: 3.3em;
+    }
+}
+
+
+@media print {
+    * {
+        -webkit-box-shadow: none !important;
+           -moz-box-shadow: none !important;
+                box-shadow: none !important;
+        background: transparent !important;
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+@page {
+    margin: 0.5cm;
+}

@@ -1,0 +1,6 @@
+# Configuración de Jekyll
+include: ['_pages', 'dev.*', '_s3']
+
+
+# Configuración del sitio
+assets_host: /_s3

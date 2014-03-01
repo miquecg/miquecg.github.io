@@ -1,0 +1,22 @@
+/*******************************************************************************
+ ICONOS
+*******************************************************************************/
+@font-face {
+    /*
+     * http://stackoverflow.com/a/16978219
+     *
+     * 1. IE9 compat modes
+     * 2. IE6-IE8
+     * 3. Modern browsers
+     * 4. Safari, Android, iOS
+     * 5. Legacy iOS
+     */
+    font-family: 'awesome';
+    src: url('../fuentes/86ff2362.awesome.eot');
+    src: url('../fuentes/86ff2362.awesome.eot?#iefix') format('embedded-opentype'),
+         url('../fuentes/0cad6bfe.awesome.woff') format('woff'),
+         url('../fuentes/ef30d4a6.awesome.ttf') format('truetype'),
+         url('../fuentes/41209196.awesome.svg#awesome') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,19 @@
+- nombre: Twitter
+  url: https://twitter.com/miquecg
+  icono: E804
+  texto-scr: Cuenta de
+
+- nombre: Google Plus
+  url: https://www.google.com/+miguelcasalguillan?rel=author
+  icono: E802
+  texto-scr: Perfil en
+
+- nombre: LinkedIn
+  url: http://www.linkedin.com/in/miquecg
+  icono: E803
+  texto-scr: Currículum Vítae en
+
+- nombre: GitHub
+  url: https://github.com/miquecg
+  icono: E801
+  texto-scr: Cuenta de

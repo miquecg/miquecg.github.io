@@ -1,0 +1,38 @@
+# Configuración de Jekyll
+exclude:
+  - 'grunt'
+  - 'node_modules'
+  - 'package.json'
+  - 'Gruntfile.js'
+  - '*.sublime-*'
+  - 'CNAME'
+  - 'README.md'
+  - 'LICENSE.md'
+  - 'src'
+  - 'dev.*'
+include: ['_pages']
+timezone: Europe/Madrid
+future: false
+lsi: false
+safe: true
+pygments: true
+markdown: redcarpet
+encoding: UTF-8
+
+
+# Configuración del sitio
+url: http://miguelcasal.es
+permalink: /articulos/:title/
+relative_permalinks: false
+paginate: 10
+paginate_path: /articulos/pag/:num/
+paginate_margin: 2 # Páginas anteriores y posteriores que se muestran junto con
+                   # la actual. Ej.: << < .. 4 (5) 6 .. > >>
+assets_host: //static.miguelcasal.es
+
+
+# Datos del sitio
+author: Miguel Casal Guillán
+title: Blog de Miguel Casal
+description: Escribo sobre programación y otros temas relacionados (o no). Soy gallego.
+license: http://creativecommons.org/licenses/by/4.0/deed.es

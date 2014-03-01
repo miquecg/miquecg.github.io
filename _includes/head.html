@@ -1,0 +1,13 @@
+        {% if page.url == '/' %}{% assign page = site.posts.first %}{% assign portada = true %}{% endif %}{% comment %}
+        {% endcomment %}<meta charset="utf-8">
+{% include dns_prefetch.html %}        {% comment %}
+        {% endcomment %}<title>{% unless portada %}{{ page.title }} · {% if paginator.total_pages > 1 %}Página {{ paginator.page }}/{{ paginator.total_pages }} · {% endif %}{% endunless %}{{ site.title }}</title>
+        <meta name="author" content="{{ site.author }}">
+        <meta name="description" content="{% if portada %}{{ site.description }}{% else %}{{ page.description }}{% if paginator.total_pages > 1 %}. Página {{ paginator.page }} de {{ paginator.total_pages }}{% endif %}{% endif %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+{% if page.id %}{% include fb_open_graph.html %}{% endif %}        {% comment %}
+        {% endcomment %}<link rel="alternate" type="application/atom+xml" title="Feed Atom de los artículos" href="/feed.atom">
+        <link rel="canonical" href="{{ site.url }}{{ page.url | remove: 'index.html' }}">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600&amp;subset=latin">
+        <link rel="stylesheet" href="/css/d222dd2d.prod.min.css">
+{% include favicons.html %}

@@ -1,0 +1,30 @@
+---
+layout: default
+permalink: /sobre-mi/
+title: Sobre mí
+description: Información sobre el autor del blog
+nojs: true
+sitemap:
+  lastmod: 2014-02-05 16:47:00 +01:00
+  priority: 0.2
+  changefreq: yearly
+---
+{% comment %}Línea en blanco para mantener la separación entre bloques{% endcomment %}
+        <!-- CONTENIDO -->
+        <main role="main">
+            <h2 class="encabezado-secciones-sitio">Sobre mí</h2>
+            <aside class="ficha-bio" role="complementary">
+                <img class="imagen-ficha-bio" src="{{ site.assets_host }}/img/sobre-mi/miguel-casal-guillan.jpg" alt="Imagen del autor del blog" title="Miguel Casal en persona"><!--
+                --><div class="perfiles-online"><!--
+                {% for perfil in site.data.perfiles %}{% comment %}
+                {% endcomment %}{% if forloop.first %} -->{% else %}    {% endif %}<span aria-hidden="true" data-icon="&#x{{ perfil.icono }};"></span><a href="{{ perfil.url }}" class="enlace transicion" rel="me external"><span class="visually-hidden">{{ perfil.texto-scr }} </span>{{ perfil.nombre }}</a>
+                {% endfor %}</div>
+            </aside>
+            <p class="texto-fuera-barra-sup parrafo-primero-secciones">¡Hola! Como habrás adivinado me llamo <b>Miguel Casal</b> y soy el autor de este blog.</p>
+            <p class="texto-fuera-barra-sup">Ésta es mi primera experiencia publicando artículos de manera regular, principalmente sobre <b>programación</b> y <b>desarrollo web</b>, aunque también daré cabida en pequeñas dosis a temas totalmente intrascendentes, que para algo es un blog <em>personal</em>. Con esta iniciativa pretendo dejar constancia de mis experiencias como profesional del desarrollo web, para ti que estás pensando contratarme y quieres conocerme un poco mejor, o para ti lector casual que has encontrado algo interesante en lo que escribo (no apostaría por ello).</p>
+            <p class="texto-fuera-barra-sup">Soy un programador un tanto atípico. Dese pequeño la informática y los ordenadores han despertado mi curiosidad, pero contrariamente a lo esperado mis derroteros académicos y profesionales me llevaron a las Ciencias Sociales. De esa etapa guardo buenos recuerdos, amigos, experiencias,... y en gran medida me ha completado como persona.</p>
+            <p class="texto-fuera-barra-sup">Pero <q cite="http://cvc.cervantes.es/lengua/refranero/ficha.aspx?Par=58840&amp;Lng=0">la cabra tira al monte</q>, que se suele decir, y de forma natural he ido reorientando poco a poco mi vida profesional hacia aquello que me gusta desde pequeño. Mi primer ordenador fue uno de tipo educativo, un <i>VTech PreComputer 2000</i>, y con él aprendí las nociones más elementales de la programación usando <a class="enlace transicion" href="http://es.wikipedia.org/wiki/BASIC" rel="external"><abbr title="Beginner's All-purpose Symbolic Instruction Code">BASIC</abbr><span class="visually-hidden"> (Beginner's All-purpose Symbolic Instruction Code)</span></a>. Luego vinieron otros, como un <a class="enlace transicion" href="http://es.wikipedia.org/wiki/Intel_80386" rel="external">Intel 80386</a> que monté y desmonté varias veces hasta que dejó de funcionar; los de amigos, siempre mejores y que me sirvieron para aprender además de jugar, o los de algún laboratorio en la Universidad donde programábamos en ensamblador los simuladores Símplez y Algorítmez.</p>
+            <p class="texto-fuera-barra-sup">Por eso, a pesar de las vueltas que dio la vida decidí mantener la coherencia conmigo mismo y acabé volviendo a este mundo que me resulta tan familiar.</p>
+            <p class="texto-fuera-barra-sup parrafo-smiley" aria-hidden="true"><span class="smiley animacion-rainbow">😃</span></p>
+        </main>
+        <!-- /CONTENIDO -->

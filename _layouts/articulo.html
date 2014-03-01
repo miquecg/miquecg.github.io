@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{% if page.url == '/' %}{% assign page = site.posts.first %}{% assign content = page.content %}{% endif %}
+        <!-- HERO -->
+        <aside class="hero sombra-hero">
+            <img src="{{ site.assets_host }}/img/articulos/{{ page.img_336_280 }}" class="imagen-hero" alt="{{ page.alt_imagen }}" title="{{ page.title_imagen }}"><!--
+            --><q class="cita-hero texto-fuera-barra-sup"><span class="texto-cita-hero">{{ page.texto_hero }}</span></q>
+        </aside>
+        <!-- /HERO -->
+
+
+        <!-- CONTENIDO -->
+        <main role="main">
+
+            <!-- ARTÍCULO -->
+            <article class="articulo" role="article">
+                <header class="cabecera-articulo">
+                    <h2 class="titulo-articulo texto-fuera-barra-sup">{{ page.title }}</h2>
+                    <time class="fecha-articulo texto-fuera-barra-sup" datetime="{{ page.date | date: '%Y-%m-%d' }}"><span class="visually-hidden">Publicado el </span>{{ page.date | date: '%d-%m-%Y' }}</time>
+                </header>
+                {{ content }}
+                <footer class="pie-articulo texto-fuera-barra-sup">
+                    <span class="texto-compartir">Compartir:</span>
+                    <a role="button" class="compartir permalink" href="{{ site.url }}{{ page.url }}" title="Enlace permanente. Se muestra en un pop-up." rel="bookmark">
+                        <span class="icono-permalink" aria-hidden="true" data-icon="&#xE800;"></span>
+                        <span class="visually-hidden">Enlace permanente. Se muestra en un pop-up.</span>
+                    </a>
+                    <a role="button" class="fb-share-button compartir facebook" data-href="{{ site.url }}{{ page.url }}" data-type="button_count"></a>
+                    <div role="button" class="g-plusone" data-size="medium" data-href="{{ site.url }}{{ page.url }}" data-annotation="bubble" data-recommendations="false"></div>
+                    <a role="button" href="https://twitter.com/share" class="twitter-share-button compartir twitter enlace transicion" data-url="{{ site.url }}{{ page.url }}" data-via="miquecg" data-text="{{ page.title }}" data-lang="es" data-related="miquecg" data-dnt="true">Twittear</a>
+                    <p class="enlaces-previo-siguiente" role="navigation">
+                        {% if page.previous %}<a href="{{ page.previous.url }}" class="enlace articulo-anterior transicion" rel="prev"><span aria-hidden="true">« </span><span class="visually-hidden">Artículo anterior: </span>{{ page.previous.title }}</a>{% endif %}{% comment %}
+                        {% endcomment %}{% if page.next %}<a href="{{ page.next.url }}" class="enlace articulo-siguiente transicion" rel="next"><span class="visually-hidden">Artículo siguiente: </span>{{ page.next.title }}<span aria-hidden="true"> »</span></a>{% endif %}
+                    </p>
+                </footer>
+            </article>
+            <!-- /ARTÍCULO -->
+
+
+            <!-- COMENTARIOS -->
+            <section class="texto-fuera-barra-sup">
+                <h3 class="encabezado-comentarios">Comentarios</h3>
+                <button role="button" class="boton-comentarios contador-comentarios off" data-disqus='{"identifier": "{{ page.url }}", "title": "{{ page.title }}", "url": "{{ site.url }}{{ page.url }}"}' data-text="Pulsa para leer " disabled aria-disabled="true" aria-controls="disqus_thread">Comentarios desactivados</button>
+                <noscript class="noscript-comentarios">No hay soporte para JavaScript</noscript>
+                <div id="disqus_thread"></div>
+            </section>
+            <!-- /COMENTARIOS -->
+
+        </main>
+        <!-- /CONTENIDO -->

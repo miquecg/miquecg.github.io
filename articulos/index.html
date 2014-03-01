@@ -1,0 +1,44 @@
+---
+layout: default
+title: Artículos
+description: Artículos publicados hasta el momento
+sitemap:
+  priority: 0.4
+  changefreq: weekly
+---
+{% comment %}Línea en blanco para mantener la separación entre bloques{% endcomment %}
+        <!-- CONTENIDO -->
+        <main role="main">
+            <h2 class="encabezado-secciones-sitio">Artículos</h2>
+
+            <!-- FICHAS -->{% for post in paginator.posts %}
+            <section class="ficha-articulo{% if forloop.first %} primero{% endif %}">
+                <h3 class="titulo-ficha-articulo"><a class="enlace transicion" href="{{ post.url }}"><span class="visually-hidden">Leer artículo: </span>{{ post.title }}</a></h3>
+                <span class="metadatos-ficha-articulo"><time datetime="{{ post.date | date: '%Y-%m-%d' }}"><span class="visually-hidden">Publicado el </span>{{ post.date | date: '%d-%m-%Y' }}</time> • <a class="enlace-a-comentarios contador-comentarios" data-disqus='{"url": "{{ site.url }}{{ post.url }}"}' href="{{ post.url }}#disqus_thread"><span class="visually-hidden">Tiene </span>0 comentarios</a></span>
+                <img class="imagen-ficha-articulo" src="{{ site.assets_host }}/img/articulos/{{ post.img_168_140 }}" alt="{{ post.alt_imagen }}" title="{{ post.title_imagen }}">
+                <p class="parrafo-ficha-articulo">{{ post.excerpt | strip_html | strip_newlines }} (<a class="enlace transicion" href="{{ post.url }}">seguir leyendo<span class="visually-hidden"> artículo "{{ post.title }}"</span></a>)</p>
+            </section>{% endfor %}
+            <!-- /FICHAS -->{% if paginator.total_pages > 1 %}
+
+
+            <!-- PAGINACIÓN -->{% capture total %}{{ site.paginate_margin | times: 2 | plus: 1 }}{% endcapture %}{% capture start %}{{ paginator.page | minus: site.paginate_margin | minus: 1 }}{% endcapture %}{% capture prev %}{{ paginator.page | minus: 1 }}{% endcapture %}{% capture next %}{{ paginator.page | plus: 1 }}{% endcapture %}
+            <nav class="paginador-articulos" role="navigation">{% unless paginator.page == 1 %}
+                <a class="boton-paginador control" href="/articulos/"><span aria-hidden="true">◂◂</span><span class="visually-hidden">Primera página</span></a>
+                <a class="boton-paginador control" href="{{ paginator.previous_page_path | remove: 'index.html' }}" rel="prev"><span aria-hidden="true">◂</span><span class="visually-hidden">Página anterior: {{ paginator.previous_page }}</span></a>{% endunless %}{% comment %}
+                {% endcomment %}{% for i in (1..paginator.total_pages) limit: total offset: start %}{% capture index %}{{ i }}{% endcapture %}{% comment %}
+                {% endcomment %}{% if forloop.first and i > 1 %}
+                <span aria-hidden="true">...</span>{% endif %}{% comment %}
+                {% endcomment %}{% if paginator.page == i %}
+                <span class="boton-paginador numero activo"><span class="visually-hidden">Página actual: </span>{{ i }}</span>{% else %}
+                <a class="boton-paginador numero" href="/articulos/{% if i > 1 %}pag/{{ i }}/{% endif %}"{% if index == next %} rel="next"{% elsif index == prev %} rel="prev"{% endif %}><span class="visually-hidden">Página </span>{{ i }}</a>{% endif %}{% comment %}
+                {% endcomment %}{% if forloop.last and i < paginator.total_pages %}
+                <span aria-hidden="true">...</span>{% endif %}{% endfor %}{% comment %}
+                {% endcomment %}{% unless paginator.page == paginator.total_pages %}
+                <a class="boton-paginador control" href="{{ paginator.next_page_path }}" rel="next"><span class="visually-hidden">Página siguiente: {{ paginator.next_page }}</span><span aria-hidden="true">▸</span></a>
+                <a class="boton-paginador control" href="/articulos/pag/{{ paginator.total_pages }}/"><span class="visually-hidden">Última página: {{ paginator.total_pages }}</span><span aria-hidden="true">▸▸</span></a>{% endunless %}
+                <p class="pagina-del-total">Página {{ paginator.page }} de {{ paginator.total_pages }}</p>
+            </nav>
+            <!-- /PAGINACIÓN -->{% endif %}
+
+        </main>
+        <!-- /CONTENIDO -->

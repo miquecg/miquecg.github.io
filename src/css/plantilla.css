@@ -1,0 +1,211 @@
+/*******************************************************************************
+ ESTILOS BASE
+*******************************************************************************/
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+body {
+    margin-bottom: 188px;
+    padding-bottom: 2em;
+}
+
+::-moz-selection {
+    background: #009999;
+    color: #FFF;
+    text-shadow: none;
+}
+
+::selection {
+    background: #009999;
+    color: #FFF;
+    text-shadow: none;
+}
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+
+/*******************************************************************************
+ ELEMENTOS COMUNES
+*******************************************************************************/
+
+
+/* Barra superior
+*******************************************************************************/
+.barra-superior {
+    border-bottom: 2px solid #555;
+    padding: 0.2em 0 0.6em;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90JBQEXN+RGfLwAAAAdSURBVAjXY1RXVWWAAjUmGIOBgeEWE4zBwMDAAAApJQKd0Os+qAAAAABJRU5ErkJggg==') #FEFEFE;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 0 0.2em;
+    font-size: 1.3em;
+}
+
+.enlace-logo {
+    color: #555;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.enlace-logo:hover,
+.enlace-logo:focus {
+    color: #009999;
+}
+
+#boton-menu {
+    border-radius: 3px;
+    padding: 0.25em 0.5em;
+    font-size: 0.85em;
+}
+
+
+/* Menú
+*******************************************************************************/
+#menu {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: left;
+}
+
+.link-menu {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 0.5em 0;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.link-menu.cuarto {
+    border-bottom: none;
+}
+
+
+/* Pie
+*******************************************************************************/
+.pie-web {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    background: #171717;
+}
+
+.parrafo-pie-web {
+    margin: 0;
+    padding: 0.3em 0 0.5em;
+    background: #171717;
+}
+
+.texto-pie-web {
+    color: #CCC;
+    font-size: 0.8em;
+}
+
+.enlaces-pie-web,
+.enlaces-pie-web:visited {
+    color: #EEE;
+}
+
+
+/* Clases de utilidad
+*******************************************************************************/
+.boton {
+    background: #555;
+    color: #FFF;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.boton:hover,
+.boton:focus {
+    background: #009999;
+}
+
+.enlace {
+    color: #1863A1;
+    text-decoration: none;
+}
+
+.enlace:visited {
+    color: #751590;
+}
+
+.enlace:hover,
+.enlace:focus {
+    color: #0181EB;
+    text-decoration: underline;
+}
+
+.articulo > p,
+.texto-fuera-barra-sup {
+    padding-left: 1.2em;
+    padding-left: 1.2rem;
+    padding-right: 1.2em;
+    padding-right: 1.2rem;
+}
+
+.transicion {
+    -webkit-transition-property: background-color, color;
+       -moz-transition-property: background-color, color;
+         -o-transition-property: background-color, color;
+            transition-property: background-color, color;
+    -webkit-transition-duration: 200ms;
+       -moz-transition-duration: 200ms;
+         -o-transition-duration: 200ms;
+            transition-duration: 200ms;
+}
+
+.visually-hidden {
+    position: absolute;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+}
+
+[data-icon]::before {
+    display: inline-block;
+    margin-right: 0.5em;
+    width: 1em;
+    content: attr(data-icon);
+    font-family: "awesome";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    speak: none;
+}
