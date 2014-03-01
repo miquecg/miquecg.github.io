@@ -1,0 +1,23 @@
+{
+    "name": "miquecg.github.io"
+  , "version": "0.1.0"
+  , "devDependencies":
+    {
+        "grunt": "~0.4.2"
+      , "grunt-concurrent": "~0.4.3"
+      , "grunt-contrib-concat": "~0.3.0"
+      , "grunt-contrib-copy": "~0.5.0"
+      , "grunt-contrib-cssmin": "~0.7.0"
+      , "grunt-contrib-uglify": "~0.3.2"
+      , "grunt-contrib-watch": "~0.5.3"
+      , "grunt-exec": "~0.4.5"
+      , "grunt-hashres": "~0.4.1"
+      , "load-grunt-tasks": "~0.3.0"
+    }
+  , "data":
+    {
+        "fb_app_id": "1436581383223149"
+      , "disqus_shortname": "miguelcasal"
+      , "disqus_api_key": "9uIsrN5AnpCHslQxRucB9lbb0I14Ku5KNpz7mM2oacpZc3hsMcA9TiZwT0qMAgcf"
+    }
+}
