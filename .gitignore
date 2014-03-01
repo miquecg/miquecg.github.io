@@ -1,3 +1,4 @@
 # Jekyll
-_site/
 _drafts/
+_site/
+node_modules/
