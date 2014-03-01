@@ -1,8 +1,8 @@
 miguelcasal.es
 ==============
 
-Éste es el código fuente de mi sitio personal [miguelcasal.es][sitio], hecho con [Jekyll][jk] y hospedado en [GitHub][gh].
+Este repositorio de [GitHub][gh] contiene el código fuente de [miguelcasal.es][blog], un blog hecho con [Jekyll][jk].
 
-[sitio]: http://miguelcasal.es
-[jk]: http://jekyllrb.com/
 [gh]: https://github.com/
+[blog]: http://miguelcasal.es
+[jk]: http://jekyllrb.com/
