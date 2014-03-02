@@ -1,4 +1,4 @@
-/* miquecg.github.io 01-03-2014 */
+/* miquecg.github.io 02-03-2014 */
 /*
  * Créditos:
  * - http://stackoverflow.com/a/5411130
@@ -47,16 +47,9 @@
 
             // Facebook SDK
             w.fbAsyncInit = function() {
-                FB.init(
-                    {
-                        appId  : '1436581383223149'
-                      , status : false
-                      , cookie : false
-                      , xfbml  : false
-                    }
-                );
+                FB.init({ appId: '1436581383223149' });
             };
-            carga.add('//connect.facebook.net/es_ES/all.js#xfbml=1'
+            carga.add('//connect.facebook.net/es_ES/all.js#status=0'
               , 'facebook-jssdk'
             );
 

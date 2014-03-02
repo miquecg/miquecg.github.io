@@ -6,16 +6,9 @@
 
             // Facebook SDK
             w.fbAsyncInit = function() {
-                FB.init(
-                    {
-                        appId  : '<%= pkg.data.fb_app_id %>'
-                      , status : false
-                      , cookie : false
-                      , xfbml  : false
-                    }
-                );
+                FB.init({ appId: '<%= pkg.data.fb_app_id %>' });
             };
-            carga.add('//connect.facebook.net/es_ES/all.js#xfbml=1'
+            carga.add('//connect.facebook.net/es_ES/all.js#status=0'
               , 'facebook-jssdk'
             );
 
