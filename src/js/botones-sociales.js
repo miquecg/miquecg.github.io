@@ -6,11 +6,15 @@
 
             // Facebook SDK
             w.fbAsyncInit = function() {
-                FB.init({ appId: '<%= pkg.data.fb_app_id %>' });
+                FB.init(
+                    {
+                        appId: '<%= pkg.data.fb_app_id %>'
+                      , status: false
+                      , xfbml: true
+                    }
+                );
             };
-            carga.add('//connect.facebook.net/es_ES/all.js#status=0'
-              , 'facebook-jssdk'
-            );
+            carga.add('//connect.facebook.net/es_ES/all.js', 'facebook-jssdk');
 
             // Twitter SDK
             carga.add('//platform.twitter.com/widgets.js', 'twitter-wjs');
