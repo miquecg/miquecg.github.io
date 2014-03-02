@@ -22,15 +22,5 @@ module.exports = function(grunt) {
           , 'concurrent'
         ]
     );
-    grunt.registerTask('dist',
-        [
-            'concat:js'
-          , 'cssmin'
-          , 'uglify'
-          , 'copy:src:prod'
-          , 'hashres:dist'
-          , 'exec:jksrv'
-        ]
-    );
 
 };
