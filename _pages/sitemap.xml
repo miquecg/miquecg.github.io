@@ -20,7 +20,7 @@ permalink: /sitemap.xml
     <url>
         <loc>{{ site.url }}{{ post.url | uri_escape }}</loc>
         <image:image>
-            <image:loc>{{ site.assets_host }}/img/articulos/{{ post.img_336_280 | uri_escape }}</image:loc>
+            <image:loc>{{ site.assets_host | prepend: 'http:' }}/img/articulos/{{ post.img_336_280 | uri_escape }}</image:loc>
             <image:title>{{ post.title_imagen }}</image:title>
         </image:image>
         <priority>0.6</priority>
