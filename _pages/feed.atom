@@ -31,7 +31,7 @@ permalink: /feed.atom
             {{ post.excerpt | strip_newlines | xml_escape }}
         </summary>
         <content type="html">
-            &lt;img src="{{ site.assets_host }}/img/articulos/{{ post.img_336_280 }}" alt="{{ post.alt_imagen | xml_escape }}" title="{{ post.title_imagen | xml_escape }}" style="margin: 0 auto;"/&gt;
+            &lt;img src="{{ site.assets_host }}/img/articulos/{{ post.img_336_280 }}" alt="{{ post.alt_imagen | xml_escape }}" title="{{ post.title_imagen | xml_escape }}" style="display: block; margin: 0 auto;"/&gt;
             {{ post.content | strip_newlines | xml_escape }}
         </content>
     </entry>
